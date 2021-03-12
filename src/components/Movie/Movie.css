@@ -1,0 +1,8 @@
+.Movie {
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+}
+
+.Movie img {
+    width: 150px;
+}
