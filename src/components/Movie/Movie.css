@@ -4,5 +4,22 @@
 }
 
 .Movie img {
-    width: 150px;
+    width: 100%;
+}
+
+.Movie-title {
+    margin-top: 0;
+    margin-left: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 100%;
+}
+
+.Movie-score {
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
 }
