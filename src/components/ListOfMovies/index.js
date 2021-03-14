@@ -5,12 +5,12 @@ import getMovies from 'services/getMovies'
 
 import './ListOfMovies.css'
 
-export default function ListOfGifs() {
+export default function ListOfMovies({categorie}) {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        getMovies().then(movies => setMovies(movies))
-    }, [])
+        getMovies({categorie}).then(movies => setMovies(movies))
+    }, [categorie])
 
     return (
         <div className="ListOfMovies">
