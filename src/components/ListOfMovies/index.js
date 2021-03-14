@@ -15,11 +15,13 @@ export default function ListOfMovies({categorie}) {
     return (
         <div className="ListOfMovies">
             {
-                movies.map(({original_title, poster_path, popularity}) =>
+                movies.map(({id, title, poster_path, vote_average}) =>
                     <Movie
-                        title={original_title}
+                        key={id}
+                        id={id}
+                        title={title}
                         poster={poster_path}
-                        usersScore={popularity}
+                        usersScore={vote_average}
                     />
                 )
             }
