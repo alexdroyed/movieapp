@@ -1,0 +1,38 @@
+.MovieDetail {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 60px 100px repeat(3, 60px);
+    grid-template-areas: 
+        "cover title"
+        "cover overview"
+        "cover vote_average"
+        "cover runtime"
+        "cover genres";
+}
+
+.MovieDetail img {
+    grid-area: cover;
+    width: 100%;
+}
+
+.Title {
+    grid-area: title;
+    margin-top: 0;
+}
+
+.Overview {
+    grid-area: overview;
+}
+
+.VoteAverage {
+    grid-area: vote_average;
+}
+
+.Runtime {
+    grid-area: runtime;
+}
+
+.Genres {
+    grid-area: genres;
+}
