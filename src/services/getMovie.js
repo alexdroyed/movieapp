@@ -6,21 +6,6 @@ export default function getMovie(movieId) {
     return fetch(apiURL)
         .then(res => res.json())
         .then(response => {
-            const {
-                genres,
-                original_title,
-                overview,
-                popularity,
-                poster_path,
-                runtime
-            } = response
-            return {
-                genres,
-                original_title,
-                overview,
-                popularity,
-                poster_path,
-                runtime
-            }
+            return response
         })
 }
