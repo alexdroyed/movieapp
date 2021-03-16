@@ -16,7 +16,7 @@ export default function Detail() {
     return (
         <div className="Detail">
             <Link to="/">Home</Link>
-            <MovieDetail movie={movie} />   
+            <MovieDetail movie={movie} />
         </div>
 
     )
