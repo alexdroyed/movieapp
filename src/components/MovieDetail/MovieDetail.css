@@ -1,19 +1,22 @@
 .MovieDetail {
     display: grid;
+    color: white;
     gap: 10px;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 40px 40px 100px 60px 60px;
+    grid-template-rows: 40px 40px 100px 60px 60px 25px;
     grid-template-areas: 
         "cover title"
         "cover genres"
         "cover overview"
         "cover vote_average"
         "cover runtime";
+    margin-top: 20px;
 }
 
 .MovieDetail img {
     grid-area: cover;
-    width: 250px;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .Title {
@@ -25,6 +28,14 @@
     grid-area: overview;
 }
 
+.Overview p{
+    margin: 0;
+}
+
+.Overview p:first-child{
+    font-weight: 600;
+}
+
 .VoteAverage {
     grid-area: vote_average;
 }
@@ -34,13 +45,47 @@
 }
 
 .Genres {
-    display: flex;
     grid-area: genres;
+    
+}
+
+.Genres p {
+    margin: 0;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.GenresList {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.Genres li {
+.GenresList li {
     margin-left: 6px;
+}
+
+@media (max-width: 768px) {
+    .MovieDetail {
+        grid-template-rows: 40px 40px 150px 60px 60px 100vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .MovieDetail {
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 40px 40px 20px 20px 25px 100vh;
+        grid-template-areas: 
+            "cover title"
+            "cover genres"
+            "cover vote_average"
+            "cover runtime"
+            ". ."
+            "overview overview";
+    }
+
+    .MovieDetail img {
+        width: 120px;
+    }
 }

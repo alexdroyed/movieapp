@@ -11,14 +11,21 @@ export default function MovieDetail({movie}) {
         <div className="MovieDetail">
             <img src={`https://image.tmdb.org/t/p/w500${poster_path}?api_key=${apiKey}`} alt="movie_poster"/>
             <h2 className="Title">{title}</h2>
-            <ul className="Genres">
+            <div className="Genres">
+                <p>Genres</p>
+                <ul className="GenresList">
                 {genres.map(({id, name}) => {
                     return <li key={id}>{name}</li> 
                 })}
-            </ul>
-            <p className="Overview">{overview}</p>
+                </ul>
+            </div>
+            
+            <div className="Overview">
+                <p>Overview</p>
+                <p>{overview}</p>
+            </div>
             <p className="VoteAverage">{vote_average}⭐</p>
-            <p className="Runtime">{runtime}</p>
+            <p className="Runtime">Duration: {runtime}min</p>
         </div>
     )
 }
