@@ -7,9 +7,11 @@ import {
 import Home from 'pages/Home'
 import Detail from 'pages/Detail'
 
+import './App.css'
+
 export default function App() {
   return (
-    <div>
+    <div className="App">
       <Router>
         <Switch>
           <Route path="/show/:showId">
